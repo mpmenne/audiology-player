@@ -20,6 +20,7 @@
         <script type="text/javascript" src="../../scripts/page-player.js"></script>
 		<script src="../../scripts/optional-page-player-metadata.js"></script>
 		<script src="../../scripts/util.js"></script>
+        <script type="text/javascript" src="../../scripts/jQuery.js"></script>
         <style type="text/css">
             body{
                 font:  75% normal verdana, arial, tahoma, "sans serif";
@@ -33,6 +34,15 @@
                 o.className = 'playlist' + (sTheme? '' + sTheme : '');
                 return false;
             }
+
+            function toggle(e) {
+                if (e.target.style.color != 'white') {
+                    e.target.style.color = 'white';
+                } else {
+                    e.target.style.color = 'orange';
+                }
+            }
+
         </script>
     </head>
 
@@ -46,9 +56,9 @@
 
         <ul class="playlist">
             <li>
-               <a href="../SEK_BKB_SIN/list1a.mp3" >List 1a</a>				
-				<div class="metadata">
-				<ul>
+               <a href="../SEK_BKB_SIN/list1a.mp3" >List 1a</a>
+                <div id="0" class="metadata">
+                <ul>
 					 <li><p>List 1a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:08</span></li>
 					 <li><p>They are looking at the clock</p><span>0:09</span></li>
@@ -93,7 +103,7 @@
 			
             <li>
                 <a href="../SEK_BKB_SIN/list2a.mp3">List 2a</a>
-				<div class="metadata">
+				<div id="1" class="metadata">
 				<ul>
 					 <li><p>List 2a</p><span>0:01</span></li>
                      <li><p>Ready</p><span>0:09</span></li><li><p>The cat is sitting on the bed</p><span>0:10</span></li>
@@ -122,7 +132,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list3a.mp3">List 3a</a>
-                <div class="metadata">
+                <div id="2" class="metadata">
 				<ul>
 					 <li><p>List 3a</p><span>0:00</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>The ball went into the goal</p><span>0:10</span></li>
@@ -150,7 +160,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list4a.mp3">List 4a</a>
-                <div class="metadata">
+                <div id="3" class="metadata">
 				<ul>
 					 <li><p>List 4a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>A mouse ran down the hole</p><span>0:10</span></li>
@@ -178,7 +188,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list5a.mp3">List 5a</a>
-                <div class="metadata">
+                <div id="4" class="metadata">
 				<ul>
 					 <li><p>List 5a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>They ate the lemon pie</p><span>0:10</span></li>
@@ -206,7 +216,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list6a.mp3">List 6a</a>
-                <div class="metadata">
+                <div id="5" class="metadata">
 				<ul>
 					 <li><p>List 6a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>A boy ran down the path</p><span>0:10</span></li>
@@ -234,7 +244,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list7a.mp3">List 7a</a>
-                <div class="metadata">
+                <div id="6" class="metadata">
 				<ul>
 					 <li><p>List 7a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>Men wear long pants</p><span>0:10</span></li>
@@ -262,7 +272,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list8a.mp3">List 8a</a>
-                <div class="metadata">
+                <div id="7" class="metadata">
 				<ul>
 					 <li><p>List 8a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>They washed in cold water</p><span>0:10</span></li>
@@ -290,7 +300,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list9a.mp3">List 9a</a>
-                <div class="metadata">
+                <div id="8" class="metadata">
 				<ul>
 					 <li><p>List 9a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>The football player lost a shoe</p><span>0:10</span></li>
@@ -315,7 +325,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list10a.mp3">List 10a</a>
-                <div class="metadata">
+                <div id="9" class="metadata">
 				<ul>
 					 <li><p>List 10a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>She looked in her mirror</p><span>0:10</span></li>
@@ -340,7 +350,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list11a.mp3">List 11a</a>
-                <div class="metadata">
+                <div id="10" class="metadata">
 				<ul>
 					 <li><p>List 11a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>The father paid at the gate</p><span>0:10</span></li>
@@ -365,7 +375,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list12a.mp3">List 12a</a>
-                <div class="metadata">
+                <div id="11" class="metadata">
 				<ul>
 					 <li><p>List 12a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:08</span></li><li><p>They heard a funny noise</p><span>0:09</span></li>
@@ -390,7 +400,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list13a.mp3">List 13a</a>
-                <div class="metadata">
+                <div id="12" class="metadata">
 				<ul>
 					 <li><p>List 13a</p><span>0:01</span></li>
 					 <li><p>Ready</p><span>0:09</span></li><li><p>The young boy left home</p><span>0:10</span></li>
@@ -415,7 +425,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list14a.mp3">List 14a</a>
-                <div class="metadata">
+                <div id="13" class="metadata">
                     <ul>
                         <li><p>List 14a</p><span>0:01</span></li>
                          <li><p>Ready</p><span>0:09</span></li><li><p>He listened to his father</p><span>0:10</span></li>
@@ -440,7 +450,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list15a.mp3">List 15a</a>
-                                <div class="metadata">
+                <div id="14" class="metadata">
                     <ul>
                         <li><p>List 15a</p><span>0:01</span></li>
                          <li><p>Ready</p><span>0:09</span></li><li><p>He wore his yellow shirt</p><span>0:10</span></li>
@@ -465,7 +475,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list16a.mp3">List 16a</a>
-                <div class="metadata">
+                <div id="15" class="metadata">
                     <ul>
                         <li><p>List 16a</p><span>0:01</span></li>
                          <li><p>Ready</p><span>0:09</span></li><li><p>The big fish got away</p><span>0:10</span></li>
@@ -490,7 +500,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list17a.mp3">List 17a</a>
-                <div class="metadata">
+                <div id="16" class="metadata">
                     <ul>
                         <li><p>List 17a</p><span>0:01</span></li>
                          <li><p>Ready</p><span>0:09</span></li><li><p>They met some friends</p><span>0:10</span></li>
@@ -515,7 +525,7 @@
             </li>
             <li>
                 <a href="../SEK_BKB_SIN/list18a.mp3">List 18a</a>
-                <div class="metadata">
+                <div id="17" class="metadata">
                     <ul>
                         <li><p>List 18a</p><span>0:01</span></li>
                          <li><p>Ready</p><span>0:09</span></li><li><p>The milkman drives a small truck</p><span>0:10</span></li>

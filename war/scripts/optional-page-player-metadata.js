@@ -87,10 +87,26 @@ var Metadata = function(oSound) {
         break;
       }
     }
+
+//    var redFun = function makeRed() {
+//        $(this).css('color', 'purple');
+//    }
+//    var whiteFun = function makeWhite() {
+//        $(this).css('color', 'orange');
+//    }
+
     if (index !== metadata.currentItem) {
+        var withDivs = '';
+        var split = metadata[index].title.split(" ");
+        for (k = 0; k < split.length; k++) {
+            withDivs = withDivs + '<span class="words">&nbsp;&nbsp;&nbsp;<span class="sm2_metadata" style="color: white;" onclick="javascript:toggle(event)">' + split[k] + '</span></span>';
+        }
       // update
-      oSound._data.oLink.innerHTML = metadata.mainTitle+' <span class="metadata"><span class="sm2_divider"> | </span><span class="sm2_metadata">'+metadata[index].title+'</span></span>';
-      pl.setPageTitle(metadata[index].title+' | '+metadata.mainTitle);
+      $('.words').remove();
+      $('#' + oLI.getElementsByTagName('div')[0].id).before(withDivs);
+//      oSound._data.oLink.innerHTML = metadata.mainTitle+' <span class="sm2_divider"> | </span>' +
+//          '<div class="metadata">'+ '' +'</div>';
+      pl.setPageTitle(metadata[index].title+' | ' + metadata.mainTitle);
       metadata.currentItem = index;
     }
   };

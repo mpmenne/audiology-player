@@ -6,6 +6,11 @@
 
 ul.playlist li a.sm2_link .metadata {
  display:none; /* hide by default */
+ font-size:.50em;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: right;
+ width: auto;
 }
 
 ul.playlist li.sm2_paused a.sm2_link .metadata,
@@ -154,7 +159,7 @@ ul.playlist li .bar {
  width:2px;
  height:1em;
  color:#666;
- background-color:orange;
+ background-color:#fff;
 }
 
 ul.playlist li .note.alt {
@@ -174,5 +179,25 @@ ul.playlist li .sm2_divider {
 }
 
 ul.playlist li .sm2_metadata {
- font-size:0.65em;
+ font-size:3em;
+ width:1.5em;
+ cursor: pointer;
+ color: white;
+
+}
+
+.sm2_metadata {
+    color: white;
+}
+
+ul.playlist li .sm2_metadata_incorrect {
+ font-size:3em;
+ width:1.5em;
+ color: red;
+}
+
+ul.playlist li .sm2_metadata_correct {
+ font-size:3em;
+ width:1.5em;
+ color: white;
 }
