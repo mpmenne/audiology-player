@@ -28,6 +28,7 @@ var Metadata = function(oSound) {
   this.data.givenDuration = null;
   this.data.currentItem = null;
   this.data.mainTitle = oSound._data.oLink.innerHTML;
+  $('.score').text('0');
 
   this.strToTime = function(sTime) {
     var segments = sTime.split(':'),
@@ -97,13 +98,15 @@ var Metadata = function(oSound) {
 
     if (index !== metadata.currentItem) {
         var withDivs = '';
+        var divId = oLI.getElementsByTagName('div')[0].id;
+        var totalPoints = oLI.getElementsByTagName('span').length;
         var split = metadata[index].title.split(" ");
         for (k = 0; k < split.length; k++) {
-            withDivs = withDivs + '<span class="words">&nbsp;&nbsp;&nbsp;<span class="sm2_metadata" style="color: white;" onclick="javascript:toggle(event)">' + split[k] + '</span></span>';
+            withDivs = withDivs + '<span class="words">&nbsp;&nbsp;&nbsp;<span id="' + divId + '" class="sm2_metadata" style="color: white;" onclick="javascript:toggle(event)">' + split[k] + '</span></span>';
         }
       // update
       $('.words').remove();
-      $('#' + oLI.getElementsByTagName('div')[0].id).before(withDivs);
+      $('#' + divId).before(withDivs);
 //      oSound._data.oLink.innerHTML = metadata.mainTitle+' <span class="sm2_divider"> | </span>' +
 //          '<div class="metadata">'+ '' +'</div>';
       pl.setPageTitle(metadata[index].title+' | ' + metadata.mainTitle);

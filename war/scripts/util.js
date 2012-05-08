@@ -7,7 +7,22 @@ function validate() {
 //   localStorage.setItem('apdHelper', "nada");
      alert("Agh!  That's not right");
   }
-  
+}
+
+function toggle(e) {
+    if (e.target.style.color != 'white') {
+        var count = $('.score').text();
+        count = parseInt(count) - 1;
+        $('.score').text('');
+        $('.score').text(count);
+        e.target.style.color = 'white';
+    } else {
+        var count = $('.score').text();
+        count = parseInt(count) + 1;
+        $('.score').text('');
+        $('.score').text(count);
+        e.target.style.color = 'orange';
+    }
 }
 
 function isLoggedIn() {

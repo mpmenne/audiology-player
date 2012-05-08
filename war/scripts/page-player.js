@@ -1006,6 +1006,8 @@ function PagePlayer() {
       '   </div>',
       '  </div>',
 
+      '  <div class="score">0</div>',
+
       '  <div class="peak">',
       '   <div class="peak-box"><span class="l"></span><span class="r"></span></div>',
       '  </div>',
