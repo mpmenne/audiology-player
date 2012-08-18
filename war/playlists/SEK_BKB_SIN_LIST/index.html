@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<!--<script src="../scripts/soundmanager2.js"></script>-->
+		<!--<script>-->
+			<!--soundManager.url = '../soundmanager2.swf';-->
+			<!--soundManager.url = '../soundmanager2_debug.swf';-->
+			<!--soundManager.flashVersion = 9;-->
+			<!--soundManager.useFlashBlock = false;-->
+			<!--soundManager.debugFlash = false;-->
+		<!--</script>-->
+		<link rel="stylesheet" type="text/css" href="../../css/optional-annotations.css" />
+		
+		<link rel="stylesheet" href="../../template/template.css" media="screen" />
+		<link rel="stylesheet" href="../../css/animation.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../../css/page-player.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/flashblock.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/optional-annotations.css" />
+		<script type="text/javascript" src="../../scripts/soundmanager2-nodebug-jsmin.js"></script>
+		<script type="text/javascript" src="../../scripts/animation.js"></script>
+        <script type="text/javascript" src="../../scripts/page-player.js"></script>
+		<script src="../../scripts/optional-page-player-metadata.js"></script>
+		<script src="../../scripts/util.js"></script>
+        <script type="text/javascript" src="../../scripts/jQuery.js"></script>
+        <style type="text/css">
+            body{
+                font:  75% normal verdana, arial, tahoma, "sans serif";
+            }
+        </style>
+        <script type="text/javascript">
+            soundManager.url = '../../soundmanager2_debug.swf';
+
+            $(document).ready(function() {
+                for (var i = 0; i < 50; i++) {
+                    $('.theEnd').after('<p>Well hello there I have amnesia.</p>');
+                }
+            });
+
+            function setTheme(sTheme) {
+                var o = document.getElementsByTagName('ul')[0];
+                o.className = 'playlist' + (sTheme? '' + sTheme : '');
+                return false;
+            }
+
+        </script>
+    </head>
+
+    <body onload="isLoggedIn()">
+        <h1>SEK BKB SIN Playlists (List Format)</h1>
+        <p style="margin:0px;padding:0px">
+
+        <div id="ball-container" class="balls">
+            <img src="../image/ball.gif" alt="" />
+        </div>
+
+        <ul class="playlist">
+            <li>
+               <a href="../SEK_BKB_SIN/list1a.mp3" >List 1a</a>
+                <div id="0" class="metadata">
+                <ul>
+					 <li><p>List 1a</p><span>0:01</span></li>
+					 <li><p>Ready</p><span>0:08</span></li>
+					 <li><p>They are looking at the clock</p><span>0:09</span></li>
+					 <li><p>Ready</p><span>0:17</span></li>
+					 <li><p>The car engine is running</p><span>0:18</span></li>
+					 <li><p>Ready</p><span>0:26</span></li>
+					 <li><p>Children like strawberries</p><span>0:27</span></li>
+					 <li><p>Ready</p><span>0:35</span></li>
+					 <li><p>They are buying some bread</p><span>0:36</span></li>
+					 <li><p>Ready</p><span>0:43</span></li>
+					 <li><p>The green tomatoes are small</p><span>0:44</span></li>
+					 <li><p>Ready</p><span>0:51</span></li>
+					 <li><p>He played with his train</p><span>0:52</span></li>
+					 <li><p>Ready</p><span>0:59</span></li>
+					 <li><p>The bag fell to the ground</p><span>1:00</span></li>
+					 <li><p>Ready</p><span>1:09</span></li>
+					 <li><p>The boy did a handstand</p><span>1:10</span></li>
+					 <li><p>Ready</p><span>1:19</span></li>
+					 <li><p>The water boiled quickly</p><span>1:20</span></li>
+					 <li><p>List 1b</p><span>1:40</span></li>
+					 <li><p>Ready</p><span>1:49</span></li>
+					 <li><p>The dog made an angry noise</p><span>1:50</span></li>
+					 <li><p>Ready</p><span>1:57</span></li>
+					 <li><p>The followed the path</p><span>1:58</span></li>
+					 <li><p>Ready</p><span>2:04</span></li>
+					 <li><p>Someone is crossing the road</p><span>2:05</span></li>
+					 <li><p>Ready</p><span>2:14</span></li>
+					 <li><p>The mail man brought a letter</p><span>2:15</span></li>
+					 <li><p>Ready</p><span>2:22</span></li>
+					 <li><p>The milk was by the front door</p><span>2:23</span></li>
+					 <li><p>Ready</p><span>2:32</span></li>
+					 <li><p>The candy shop was empty</p><span>2:33</span></li>
+					 <li><p>Ready</p><span>2:41</span></li>
+					 <li><p>The lady stayed for lunch</p><span>2:42</span></li>
+					 <li><p>Ready</p><span>2:49</span></li>
+					 <li><p>The police man knows the way</p><span>2:50</span></li>
+					 <li><p>...</p><span>2:58</span></li>-->
+				</ul>
+				</div>
+            </li>
+        </ul>
+
+        <div id="sm2-container">
+          <!-- SM2 flash movie goes here -->
+         </div>
+
+        <div class="theEnd"></div>
+
+        <div class="theEnd">
+
+        </div>
+
+    </body>
+
+
+</html>
