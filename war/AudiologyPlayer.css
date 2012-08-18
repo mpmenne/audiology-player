@@ -2,20 +2,20 @@
 
 
 /** Example rules used by the template application (remove for your app) */
-h1 {
-  font-size: 2em;
-  font-weight: bold;
-  color: #777777;
-  margin: 40px 0px 70px;
-  text-align: center;
-}
+/*h1 {*/
+  /*font-size: 2em;*/
+  /*font-weight: bold;*/
+  /*color: #777777;*/
+  /*margin: 40px 0px 70px;*/
+  /*text-align: center;*/
+/*}*/
 
-p {
-  font-weight: bold;
-  color: #777777;
-  margin: 40px 0px 70px;
-  text-align: center;
-}
+/*p {*/
+  /*font-weight: bold;*/
+  /*color: #777777;*/
+  /*margin: 40px 0px 70px;*/
+  /*text-align: center;*/
+/*}*/
 
 .sendButton {
   display: block;
